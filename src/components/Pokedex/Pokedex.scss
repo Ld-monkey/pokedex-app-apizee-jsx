@@ -1,0 +1,34 @@
+.pokedex-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4rem 1rem;
+
+  &__card {
+    border: 1px solid gray;
+    width: 200px;
+    border-radius: 3px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-avatar {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    &>h3 {
+      text-align: center;
+    }
+
+    &>ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+}
