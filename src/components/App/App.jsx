@@ -8,6 +8,13 @@ function App() {
   const [pokedex, setPokedex] = useState();
   const [countPagination, setCountPagination] = useState(1);
 
+  const [toggleModal, setToggleModal] = useState(false);
+  const [idModal, setIdModal] = useState(null);
+
+  function setModal() {
+    setIdModal("0")
+  }
+
   function handleLoadMore() {
     // const count = countPagination + 1;
     setCountPagination(countPagination + 1);
@@ -34,7 +41,7 @@ function App() {
   return (
     <main>
       <NavBar />
-      {pokedex && <Pokedex data={pokedex} />}
+      {pokedex && <Pokedex data={pokedex} setId={setIdModal}/>}
       <button type="button" onClick={handleLoadMore} className="button-loading">
         Load more
       </button>

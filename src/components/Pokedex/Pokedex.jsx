@@ -1,11 +1,15 @@
 import './Pokedex.scss';
 
-function Pokedex({ data }) {
+function Pokedex({ data, setId }) {
   return (
     <div className="wrapper">
       <div className="pokedex-container">
         {data.map((pokemon) => (
-          <div className="pokedex-container__card" key={pokemon.id}>
+          <div
+            className="pokedex-container__card"
+            key={pokemon.id}
+            onClick={setId}
+          >
             <img
               src={pokemon.image}
               alt={pokemon.name}
