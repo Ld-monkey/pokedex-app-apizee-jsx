@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+	font-family: "Work Sans";
+}
+
+.wrapper {
+  max-width: 120rem;
+  width: 90vw;
+  margin: 0 auto;
+}

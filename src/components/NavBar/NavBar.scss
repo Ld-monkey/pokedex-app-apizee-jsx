@@ -1,5 +1,5 @@
 .header {
-  border: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 
   &__navbar {
     display: flex;
@@ -13,16 +13,17 @@
       padding: 10px;
     }
 
-    &-searchbar{
-
+    &-searchbar {
+      display: flex;
+      gap: 10px;
     }
 
     &-searchbar-input {
-
+      padding: 10px 20px;
     }
 
     &-searchbar-button {
-
+      cursor: pointer;
     }
   }
 }
