@@ -1,6 +1,6 @@
 import './NavBar.scss';
-import PokemonBanner from '../assets/pokemon-title-left.png';
-import PokedexImage from '../assets/icon-pokedex-rigth.png';
+import PokemonBanner from '../../assets/pokemon-title-left.png';
+import PokedexImage from '../../assets/icon-pokedex-rigth.png';
 
 function NavBar() {
   return (
