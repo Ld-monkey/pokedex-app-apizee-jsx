@@ -1,0 +1,28 @@
+.header {
+  border: 1px solid #d9d9d9;
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+
+    &-banner,
+    &-image-pokedex {
+      height: 100%;
+      padding: 10px;
+    }
+
+    &-searchbar{
+
+    }
+
+    &-searchbar-input {
+
+    }
+
+    &-searchbar-button {
+
+    }
+  }
+}
