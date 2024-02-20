@@ -1,6 +1,6 @@
 import './Pokedex.scss';
 
-function Pokedex({ data, setId }) {
+function Pokedex({ data, setPokemonId }) {
   return (
     <div className="wrapper">
       <div className="pokedex-container">
@@ -8,7 +8,9 @@ function Pokedex({ data, setId }) {
           <div
             className="pokedex-container__card"
             key={pokemon.id}
-            onClick={setId}
+            onClick={() => setPokemonId(pokemon.id)}
+            onKeyDown={() => setPokemonId(pokemon.id)}
+            role="presentation"
           >
             <img
               src={pokemon.image}

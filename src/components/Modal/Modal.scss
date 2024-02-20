@@ -1,3 +1,28 @@
 .modal-container {
   position: fixed;
+  border: 1px solid gray;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: white;
+  padding: 10px;
+  border-radius: 3px;
+
+  &__header {
+    display: flex;
+    gap: 30px;
+
+    &-button {
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    margin-top: 25px;
+  }
 }

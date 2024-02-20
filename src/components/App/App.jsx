@@ -3,21 +3,25 @@ import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
 import Pokedex from '../Pokedex/Pokedex';
 import './App.scss';
+import Modal from '../Modal/Modal';
+import CloseModal from '../Modal/CloseModal';
 
 function App() {
   const [pokedex, setPokedex] = useState();
   const [countPagination, setCountPagination] = useState(1);
-
-  const [toggleModal, setToggleModal] = useState(false);
   const [idModal, setIdModal] = useState(null);
 
-  function setModal() {
-    setIdModal("0")
-  }
+  const [toggleModal, setToggleModal] = useState(false);
 
   function handleLoadMore() {
-    // const count = countPagination + 1;
     setCountPagination(countPagination + 1);
+  }
+
+  function handleToggleModal() {
+    if (idModal) {
+      setIdModal(null);
+    }
+    setToggleModal(false);
   }
 
   async function fetchPokedexData() {
@@ -39,13 +43,19 @@ function App() {
   }, [countPagination]);
 
   return (
-    <main>
+    <div className="app">
       <NavBar />
-      {pokedex && <Pokedex data={pokedex} setId={setIdModal}/>}
+      <main>
+        <CloseModal toggleModal={() => handleToggleModal()} />
+        {pokedex && <Pokedex data={pokedex} setPokemonId={setIdModal} />}
+        {idModal && (
+          <Modal idPokemon={idModal} toggleModal={() => handleToggleModal()} />
+        )}
+      </main>
       <button type="button" onClick={handleLoadMore} className="button-loading">
         Load more
       </button>
-    </main>
+    </div>
   );
 }
 

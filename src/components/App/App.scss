@@ -1,6 +1,11 @@
-main {
+.app {
   display: flex;
   flex-direction: column;
+}
+
+main {
+  height: 100%;
+  position: relative;
 }
 
 .button-loading {

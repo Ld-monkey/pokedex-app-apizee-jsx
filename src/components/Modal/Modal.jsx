@@ -1,11 +1,15 @@
 import './Modal.scss';
 
-function Modal() {
+function Modal({ id, toggleModal }) {
   return (
     <div className="modal-container">
       <div className="modal-container__header">
-        <h1>Nom du pokemon</h1>
-        <button type="button" className="modal-container__header-button">
+        <h2>Nom du pokemon</h2>
+        <button
+          type="button"
+          className="modal-container__header-button"
+          onClick={toggleModal}
+        >
           x
         </button>
       </div>
