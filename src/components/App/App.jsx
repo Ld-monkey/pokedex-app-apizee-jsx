@@ -10,12 +10,7 @@ function App() {
   const [pokedex, setPokedex] = useState();
   const [countPagination, setCountPagination] = useState(1);
   const [idModal, setIdModal] = useState(null);
-
   const [toggleModal, setToggleModal] = useState(false);
-
-  function handleLoadMore() {
-    setCountPagination(countPagination + 1);
-  }
 
   function handleToggleModal() {
     if (idModal) {
@@ -52,7 +47,11 @@ function App() {
           <Modal idPokemon={idModal} toggleModal={() => handleToggleModal()} />
         )}
       </main>
-      <button type="button" onClick={handleLoadMore} className="button-loading">
+      <button
+        type="button"
+        onClick={() => setCountPagination(countPagination + 1)}
+        className="button-loading"
+      >
         Load more
       </button>
     </div>

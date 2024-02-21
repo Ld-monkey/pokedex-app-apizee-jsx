@@ -3,14 +3,17 @@
   border: 1px solid gray;
   left: 50%;
   top: 50%;
+  min-width: 300px;
+  min-height: 250px;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 10;
   background: white;
   padding: 10px;
   border-radius: 3px;
 
   &__header {
     display: flex;
+    justify-content: space-between;
     gap: 30px;
 
     &-button {
@@ -24,5 +27,9 @@
 
   &__content {
     margin-top: 25px;
+
+    &-loading {
+      text-align: center;
+    }
   }
 }
