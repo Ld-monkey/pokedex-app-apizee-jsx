@@ -17,7 +17,7 @@ function Pokedex({ data, setPokemonId }) {
               alt={pokemon.name}
               className="pokedex-container__card-avatar"
             />
-            <h3>{`${pokemon.name} (Id : ${pokemon.id})`}</h3>
+            <h3>{`${pokemon.name} (ID : ${pokemon.id})`}</h3>
             <h4>Type(s) : </h4>
             <ul>
               {pokemon.apiTypes.map((type) => (

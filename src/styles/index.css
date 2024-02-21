@@ -4,8 +4,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  min-height: 100vh;
-	font-family: "Work Sans";
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #e8e8e8;
 }
 
 .wrapper {
